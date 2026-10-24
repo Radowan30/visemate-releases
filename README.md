@@ -72,8 +72,12 @@ To be certain, compare the file's SHA-256 checksum with the one in the release n
 | macOS | `shasum -a 256 visemate.apk` |
 | Linux | `sha256sum visemate.apk` |
 
-Developers can also check the signature with the Android SDK's `apksigner verify --print-certs visemate.apk`. The
-certificate's SHA-256 digest must match the fingerprint in the release notes.
+Developers can also check the signature with the Android SDK's `apksigner verify --print-certs visemate.apk`. Every
+release is signed with the same certificate, `CN=Visemate, O=NEXAI-GEN, C=MY`, whose SHA-256 fingerprint is:
+
+```
+e55da2a9e7f0b82ab4f840f8d666e9ca1f6df0d58fc4d4850196d554218c92b3
+```
 
 ## Privacy
 
